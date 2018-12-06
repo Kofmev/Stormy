@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Stormy</string>
+    <string name="error_title">Oops! Sorry</string>
+    <string name="error_message">Er is iets fout gegaan, probeer het nog een keer!</string>
+    <string name="error_button_ok">OK</string>
+    <string name="network_unavailable_message">Sorry, het netwerk is niet beschikbaar</string>
+    <string name="dark_sky_message"><a href="https://darksky.net/poweredby">Powered by Dark Sky</a></string>
+    <string name="default_location">Wageningen, NL</string>
+    <string name="luchtvochtigheid">Luchtvochtigheid</string>
+    <string name="neerslag_kans">Kans op neerslag</string>
+</resources>
