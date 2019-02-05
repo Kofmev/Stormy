@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
+    private String tester;
     private CurrentWeather currentWeather;
     private ImageView iconImageView;
     final double latitude = 51.970361;
