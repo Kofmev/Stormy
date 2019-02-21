@@ -169,6 +169,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/dailyForecastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="dailyOnClick"
+        android:text="@string/daily_forecast"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryValue"
+        app:layout_constraintVertical_bias="0.561" />
+
     <ImageView
         android:id="@+id/refreshImageView"
         android:layout_width="wrap_content"

@@ -8,4 +8,6 @@
     <string name="default_location">Wageningen, NL</string>
     <string name="luchtvochtigheid">Luchtvochtigheid</string>
     <string name="neerslag_kans">Kans op neerslag</string>
+    <string name="daily_forecast">Per dag</string>
+    <string name="daily_forecast_title">Dagelijkse voorspelling</string>
 </resources>

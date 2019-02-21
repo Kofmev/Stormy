@@ -1,6 +1,7 @@
 package nl.chefkev.stormy.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
@@ -20,6 +21,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.databinding.ActivityMainBinding;
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private String tester;
     private CurrentWeather currentWeather;
     private ImageView iconImageView;
+    private Forecast forecast;
     final double latitude = 51.970361;
     final double longitude = 5.650481;
 
@@ -84,10 +89,11 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(Call call, Response response) throws IOException {
                     try {
                         String jsonData = response.body().string();
-                        Log.v(TAG, jsonData);
-                        if (response.isSuccessful()) {
 
-                            currentWeather = getCurrentDetails(jsonData);
+                        if (response.isSuccessful()) {
+                            forecast = parseForecastData(jsonData);
+
+                            final CurrentWeather currentWeather = forecast.getCurrent();
 
                             final CurrentWeather displayWeather = new CurrentWeather(
                                     currentWeather.getLocationLabel(),
@@ -181,6 +187,13 @@ public class MainActivity extends AppCompatActivity {
         return new JSONObject(JSONData);
     }
 
+    public void dailyOnClick(View view) {
+        List<Day> days = Arrays.asList(forecast.getDailyForecast());
+        Intent intent = new Intent(this, DailyForecastActivity.class);
+        intent.putExtra("dailyList", (Serializable) days);
+        startActivity(intent);
+    }
+
     private Day[] getDailyForecast(String JSONData) throws JSONException {
         JSONObject forecast = createJSONObject(JSONData);
         String timeZone = forecast.getString("timezone");
@@ -203,8 +216,17 @@ public class MainActivity extends AppCompatActivity {
 
             days[i] = day;
         }
-
         return days;
+    }
+
+    private Forecast parseForecastData(String jsonData) throws JSONException {
+        Forecast forecast = new Forecast();
+
+        forecast.setCurrent(getCurrentDetails(jsonData));
+        forecast.setDailyForecast(getDailyForecast(jsonData));
+
+
+        return forecast;
     }
 }
 
