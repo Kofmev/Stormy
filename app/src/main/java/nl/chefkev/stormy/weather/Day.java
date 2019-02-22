@@ -24,7 +24,7 @@ public class Day implements Serializable {
     }
 
     public String getTime() {
-        SimpleDateFormat format = new SimpleDateFormat("MMM dd ss");
+        SimpleDateFormat format = new SimpleDateFormat("MMM dd");
         format.setTimeZone(TimeZone.getTimeZone(timezone));
 
         Date date = new Date(time * 1000);
