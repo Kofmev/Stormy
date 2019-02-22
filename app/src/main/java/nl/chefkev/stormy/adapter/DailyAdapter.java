@@ -43,11 +43,11 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> 
         return days.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         DailyListItemBinding listItemBinding;
 
 
-        ViewHolder(DailyListItemBinding dailyLayoutItemBinding) {
+      public ViewHolder(DailyListItemBinding dailyLayoutItemBinding) {
             super(dailyLayoutItemBinding.getRoot());
             listItemBinding = dailyLayoutItemBinding;
         }
