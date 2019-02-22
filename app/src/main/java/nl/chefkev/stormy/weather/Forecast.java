@@ -3,8 +3,7 @@ package nl.chefkev.stormy.weather;
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.ui.CurrentWeather;
 
-public class Forecast
-{
+public class Forecast {
     private CurrentWeather current;
     private Day[] dailyForecast;
 
@@ -24,12 +23,10 @@ public class Forecast
         this.dailyForecast = dailyForecast;
     }
 
-    public static int getIconID(String icon)
-    {
+    public static int getIconID(String icon) {
         int iconID = R.drawable.clear_day;
 
-        switch (icon)
-        {
+        switch (icon) {
             case "rain":
                 iconID = R.drawable.rain;
                 break;

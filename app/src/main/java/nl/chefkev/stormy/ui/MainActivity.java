@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    private String tester;
-    private CurrentWeather currentWeather;
     private ImageView iconImageView;
     private Forecast forecast;
     final double latitude = 51.970361;
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         getForecast(latitude, longitude);
-            Log.d(TAG, "main UI code is running, yippie ka yay!");
+        Log.d(TAG, "main UI code is running.");
 
     }
 
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         iconImageView = findViewById(R.id.iconImageView);
 
         String apiKey = "ce582382263ad1c4a1ec78f02d7ab0fb";
-
 
         String forecastURL = "https://api.darksky.net/forecast/"
                 + apiKey + "/" + latitude + "," + longitude + "?units=si&lang=nl";
@@ -107,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                             );
 
                             binding.setWeather(currentWeather);
-                            iconImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),displayWeather.getIconById(), null));
+                            iconImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), displayWeather.getIconById(), null));
 
                             runOnUiThread(new Runnable() {
                                 @Override
@@ -145,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         currentWeather.setHumidity(currently.getDouble("humidity"));
         currentWeather.setTime(currently.getLong("time"));
         currentWeather.setIcon(currently.getString("icon"));
-        currentWeather.setLocationLabel("Alcatraz Island, CA");
+        currentWeather.setLocationLabel("");
         currentWeather.setPrecipChance(currently.getDouble("precipProbability"));
         currentWeather.setSummary(currently.getString("summary"));
         currentWeather.setTemperature(currently.getDouble("temperature"));
@@ -158,15 +155,14 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isNetworkAvailable() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert manager != null;
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
 
         boolean isAvailable = false;
 
         if (networkInfo != null && networkInfo.isConnected()) {
             isAvailable = true;
-        } else
-
-        {
+        } else {
             Toast.makeText(this, R.string.network_unavailable_message,
                     Toast.LENGTH_LONG).show();
         }
@@ -178,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show(getFragmentManager(), "error_dialog");
     }
 
-    public void refreshOnClick(View view){
+    public void refreshOnClick(View view) {
         Toast.makeText(this, "Refreshing data", Toast.LENGTH_LONG).show();
         getForecast(latitude, longitude);
     }
@@ -224,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
 
         forecast.setCurrent(getCurrentDetails(jsonData));
         forecast.setDailyForecast(getDailyForecast(jsonData));
-
 
         return forecast;
     }

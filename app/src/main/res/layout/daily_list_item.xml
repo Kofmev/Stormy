@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
         <variable
             name="day"
@@ -12,9 +13,9 @@
         android:id="@+id/dailyListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/appBackground"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:background="@color/appBackground"
         tools:context=".ui.DailyForecastActivity">
 
         <TextView
@@ -25,36 +26,36 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:text="@{String.valueOf(day.time)}"
-            android:textSize="24sp"
             android:textColor="@android:color/white"
-            tools:Text="Today"/>
+            android:textSize="24sp"
+            tools:Text="Today" />
 
         <ImageView
             android:id="@+id/iconImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/dayLabel"
             android:layout_toEndOf="@id/dayLabel"
-            app:imageResource="@{day.icon}"
+            android:layout_toRightOf="@id/dayLabel"
             android:textSize="24sp"
+            app:imageResource="@{day.icon}"
             app:srcCompat="@drawable/cloudy" />
 
         <TextView
             android:id="@+id/summaryLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentTop="false"
             android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/iconImageView"
+            android:layout_centerVertical="true"
             android:layout_toEndOf="@id/iconImageView"
-            android:textColor="@android:color/white"
+            android:layout_toRightOf="@id/iconImageView"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:textSize="24sp"
             android:text="@{String.valueOf(day.summary)}"
-            tools:text="N/A"/>
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:text="N/A" />
 
         <TextView
             android:id="@+id/temperatureLabel"
@@ -62,10 +63,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:textSize="24sp"
-            android:textColor="@android:color/white"
             android:text="@{String.valueOf(day.temperature)}"
-            tools:Text="50"/>
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:Text="50" />
 
     </RelativeLayout>
 </layout>

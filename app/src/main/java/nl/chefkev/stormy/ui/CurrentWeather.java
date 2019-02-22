@@ -18,11 +18,11 @@ public class CurrentWeather {
     private String summary;
     private String timeZone;
 
-    public CurrentWeather() {
+    CurrentWeather() {
     }
 
-    public CurrentWeather(String locationLabel, String icon, long time, double temperature,
-                          double humidity, double precipChance, String summary, String timeZone) {
+    CurrentWeather(String locationLabel, String icon, long time, double temperature,
+                   double humidity, double precipChance, String summary, String timeZone) {
         this.locationLabel = locationLabel;
         this.icon = icon;
         this.time = time;
@@ -33,23 +33,23 @@ public class CurrentWeather {
         this.timeZone = timeZone;
     }
 
-    public String getTimeZone() {
+    String getTimeZone() {
         return timeZone;
     }
 
-    public void setTimeZone(String timeZone) {
+    void setTimeZone(String timeZone) {
         this.timeZone = timeZone;
     }
 
-    public String getLocationLabel() {
+    String getLocationLabel() {
         return locationLabel;
     }
 
-    public void setLocationLabel(String locationLabel) {
+    void setLocationLabel(String locationLabel) {
         this.locationLabel = locationLabel;
     }
 
-    public long getTime() {
+    long getTime() {
         return time;
     }
 
@@ -63,18 +63,19 @@ public class CurrentWeather {
         return formatter.format(dateTime);
     }
 
-    public String getIcon(){
+    String getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon){
+    void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public int getIconById(){
+    int getIconById() {
         return Forecast.getIconID(icon);
     }
-    public void setTime(long time) {
+
+    void setTime(long time) {
         this.time = time;
     }
 
@@ -82,7 +83,7 @@ public class CurrentWeather {
         return temperature;
     }
 
-    public void setTemperature(double temperature) {
+    void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 
@@ -90,7 +91,7 @@ public class CurrentWeather {
         return humidity;
     }
 
-    public void setHumidity(double humidity) {
+    void setHumidity(double humidity) {
         this.humidity = humidity;
     }
 
@@ -98,7 +99,7 @@ public class CurrentWeather {
         return precipChance;
     }
 
-    public void setPrecipChance(double precipChance) {
+    void setPrecipChance(double precipChance) {
         this.precipChance = precipChance;
     }
 
@@ -106,7 +107,7 @@ public class CurrentWeather {
         return summary;
     }
 
-    public void setSummary(String summary) {
+    void setSummary(String summary) {
         this.summary = summary;
     }
 }

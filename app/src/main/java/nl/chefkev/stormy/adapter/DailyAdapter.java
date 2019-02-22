@@ -12,21 +12,18 @@ import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.weather.Day;
 import nl.chefkev.stormy.databinding.DailyListItemBinding;
 
-public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>
-{
+public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> {
 
     private List<Day> days;
     private Context context;
 
-    public DailyAdapter(List<Day> days, Context context)
-    {
+    public DailyAdapter(List<Day> days, Context context) {
         this.days = days;
         this.context = context;
     }
 
     @Override
-    public DailyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
-    {
+    public DailyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         DailyListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.daily_list_item,
                 parent, false);
@@ -35,8 +32,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(DailyAdapter.ViewHolder holder, int position)
-    {
+    public void onBindViewHolder(DailyAdapter.ViewHolder holder, int position) {
         Day day = days.get(position);
         holder.listItemBinding.setDay(day);
 
@@ -47,13 +43,11 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>
         return days.size();
     }
 
-    public class ViewHolder extends  RecyclerView.ViewHolder
-    {
-        public DailyListItemBinding listItemBinding;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        DailyListItemBinding listItemBinding;
 
 
-        public ViewHolder(DailyListItemBinding dailyLayoutItemBinding)
-        {
+        ViewHolder(DailyListItemBinding dailyLayoutItemBinding) {
             super(dailyLayoutItemBinding.getRoot());
             listItemBinding = dailyLayoutItemBinding;
         }
