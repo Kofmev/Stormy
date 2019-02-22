@@ -1,6 +1,7 @@
 package nl.chefkev.stormy.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
@@ -20,6 +21,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.databinding.ActivityMainBinding;
@@ -35,9 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    private String tester;
-    private CurrentWeather currentWeather;
     private ImageView iconImageView;
+    private Forecast forecast;
     final double latitude = 51.970361;
     final double longitude = 5.650481;
 
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         getForecast(latitude, longitude);
-            Log.d(TAG, "main UI code is running, yippie ka yay!");
+        Log.d(TAG, "main UI code is running.");
 
     }
 
@@ -60,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         iconImageView = findViewById(R.id.iconImageView);
 
         String apiKey = "ce582382263ad1c4a1ec78f02d7ab0fb";
-
 
         String forecastURL = "https://api.darksky.net/forecast/"
                 + apiKey + "/" + latitude + "," + longitude + "?units=si&lang=nl";
@@ -84,10 +86,11 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(Call call, Response response) throws IOException {
                     try {
                         String jsonData = response.body().string();
-                        Log.v(TAG, jsonData);
-                        if (response.isSuccessful()) {
 
-                            currentWeather = getCurrentDetails(jsonData);
+                        if (response.isSuccessful()) {
+                            forecast = parseForecastData(jsonData);
+
+                            final CurrentWeather currentWeather = forecast.getCurrent();
 
                             final CurrentWeather displayWeather = new CurrentWeather(
                                     currentWeather.getLocationLabel(),
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                             );
 
                             binding.setWeather(currentWeather);
-                            iconImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),displayWeather.getIconById(), null));
+                            iconImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), displayWeather.getIconById(), null));
 
                             runOnUiThread(new Runnable() {
                                 @Override
@@ -139,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         currentWeather.setHumidity(currently.getDouble("humidity"));
         currentWeather.setTime(currently.getLong("time"));
         currentWeather.setIcon(currently.getString("icon"));
-        currentWeather.setLocationLabel("Alcatraz Island, CA");
+        currentWeather.setLocationLabel("");
         currentWeather.setPrecipChance(currently.getDouble("precipProbability"));
         currentWeather.setSummary(currently.getString("summary"));
         currentWeather.setTemperature(currently.getDouble("temperature"));
@@ -152,15 +155,14 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isNetworkAvailable() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert manager != null;
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
 
         boolean isAvailable = false;
 
         if (networkInfo != null && networkInfo.isConnected()) {
             isAvailable = true;
-        } else
-
-        {
+        } else {
             Toast.makeText(this, R.string.network_unavailable_message,
                     Toast.LENGTH_LONG).show();
         }
@@ -172,13 +174,20 @@ public class MainActivity extends AppCompatActivity {
         dialog.show(getFragmentManager(), "error_dialog");
     }
 
-    public void refreshOnClick(View view){
+    public void refreshOnClick(View view) {
         Toast.makeText(this, "Refreshing data", Toast.LENGTH_LONG).show();
         getForecast(latitude, longitude);
     }
 
     private JSONObject createJSONObject(String JSONData) throws JSONException {
         return new JSONObject(JSONData);
+    }
+
+    public void dailyOnClick(View view) {
+        List<Day> days = Arrays.asList(forecast.getDailyForecast());
+        Intent intent = new Intent(this, DailyForecastActivity.class);
+        intent.putExtra("dailyList", (Serializable) days);
+        startActivity(intent);
     }
 
     private Day[] getDailyForecast(String JSONData) throws JSONException {
@@ -203,8 +212,16 @@ public class MainActivity extends AppCompatActivity {
 
             days[i] = day;
         }
-
         return days;
+    }
+
+    private Forecast parseForecastData(String jsonData) throws JSONException {
+        Forecast forecast = new Forecast();
+
+        forecast.setCurrent(getCurrentDetails(jsonData));
+        forecast.setDailyForecast(getDailyForecast(jsonData));
+
+        return forecast;
     }
 }
 

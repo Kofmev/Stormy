@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Stormy</string>
+    <string name="app_name">YourWeather</string>
     <string name="error_title">Oops! Sorry</string>
     <string name="error_message">Er is iets fout gegaan, probeer het nog een keer!</string>
     <string name="error_button_ok">OK</string>
@@ -8,4 +8,6 @@
     <string name="default_location">Wageningen, NL</string>
     <string name="luchtvochtigheid">Luchtvochtigheid</string>
     <string name="neerslag_kans">Kans op neerslag</string>
+    <string name="daily_forecast">Per dag</string>
+    <string name="daily_forecast_title">Dagelijkse voorspelling</string>
 </resources>

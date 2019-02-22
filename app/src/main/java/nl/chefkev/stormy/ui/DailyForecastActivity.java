@@ -14,9 +14,7 @@ import nl.chefkev.stormy.adapter.DailyAdapter;
 import nl.chefkev.stormy.databinding.ContentDailyForecastBinding;
 import nl.chefkev.stormy.weather.Day;
 
-public class DailyForecastActivity extends AppCompatActivity
-{
-
+public class DailyForecastActivity extends AppCompatActivity {
     private ContentDailyForecastBinding binding;
     private DailyAdapter dailyAdapter;
 
@@ -26,10 +24,8 @@ public class DailyForecastActivity extends AppCompatActivity
         Intent intent = getIntent();
         setContentView(R.layout.activity_daily_forecast);
         List<Day> dayList = (ArrayList<Day>) intent.getSerializableExtra("dailyList");
-
         binding = DataBindingUtil.setContentView(this, R.layout.content_daily_forecast);
-
-        dailyAdapter = new DailyAdapter(dayList, this );
+        dailyAdapter = new DailyAdapter(dayList, this);
 
         binding.dailyListItems.setAdapter(dailyAdapter);
         binding.dailyListItems.setLayoutManager(new LinearLayoutManager(this));

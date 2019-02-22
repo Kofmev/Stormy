@@ -63,17 +63,18 @@ public class CurrentWeather {
         return formatter.format(dateTime);
     }
 
-    public String getIcon(){
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon){
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public int getIconById(){
+    public int getIconById() {
         return Forecast.getIconID(icon);
     }
+
     public void setTime(long time) {
         this.time = time;
     }
