@@ -88,7 +88,7 @@ public class CurrentWeather {
         return temperature;
     }
 
-    public void setTemperature(double temperature) {
+    void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 
