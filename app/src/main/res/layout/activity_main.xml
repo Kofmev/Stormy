@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="weather"
             type="nl.chefkev.stormy.ui.CurrentWeather" />
@@ -23,7 +24,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@{String.valueOf(Math.round(weather.temperature)), default=`100`}"
+            android:text="@{String.valueOf(Math.round(weather.temperature)), default=`19`}"
             android:textColor="@android:color/white"
             android:textSize="150sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,37 +48,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@{`Om ` + String.valueOf(weather.formattedTime + ` is het`), default= `At 5:00 PM it will be:` }"
+            android:text="@{`Om ` + String.valueOf(weather.formattedTime + ` is het`), default= `Om 5:00 PM is het:` }"
             android:textColor="@color/half_white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/temperatureValue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationValue" />
 
         <TextView
             android:id="@+id/locationValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="24dp"
             android:text="@string/default_location"
             android:textColor="@android:color/white"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/timeValue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dailyForecastButton" />
 
         <ImageView
             android:id="@+id/iconImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/locationValue"
+            android:layout_width="58dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryValue"
             app:srcCompat="@drawable/cloudy_night" />
 
         <android.support.constraint.Guideline
@@ -85,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.33" />
+            app:layout_constraintGuide_percent="0.34" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline2"
@@ -150,7 +155,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@{weather.summary, default=` Stormy with a chance of meatballs`}"
+            android:text="@{weather.summary, default=` Typisch Hollands weertje`}"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,18 +180,15 @@
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="52dp"
             android:background="@android:color/holo_red_light"
             android:onClick="dailyOnClick"
             android:text="@string/daily_forecast"
             android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/summaryValue"
-            app:layout_constraintVertical_bias="0.561" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/refreshImageView"
@@ -197,10 +199,10 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:onClick="refreshOnClick"
-            app:layout_constraintBottom_toTopOf="@+id/locationValue"
+            app:layout_constraintBottom_toTopOf="@+id/darkSkyAttribution"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconImageView"
             app:srcCompat="@drawable/refresh" />
 
     </android.support.constraint.ConstraintLayout>
