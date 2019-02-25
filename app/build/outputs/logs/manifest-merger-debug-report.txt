@@ -1,0 +1,129 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.databinding:adapters:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/adapters-3.3.1.aar/5a443381dfa90d6c53178b76499013f4/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/library-3.3.1.aar/cf3fd4ca4153c2a625fd325ed5f93093/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.0.aar/0b9be5abf228fb70ebffb7a8dae24478/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/dc5b75c19d9bdb7833cc38e172a83ce2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.0.aar/0d879d6607cbc7689dd92e2345a5e0db/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.0.aar/85704b6a803de9b76d0f782c95ff4a75/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.0.aar/e6ce52403cf77b522c0f110edf040891/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.0.aar/27c832b3d2ee21df841c6ecfd39ee331/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.0.aar/fd158bbce5b8c4219d8bc74fd99ee31d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.0.aar/e8c3c5db1f0d6b56ce18cd044bbace13/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.0.aar/87fe027719b799f80785e3432d67e4c0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/dd1a651639c2c1b96ad20f0333942746/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:7:5-31:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/dc5b75c19d9bdb7833cc38e172a83ce2/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/dc5b75c19d9bdb7833cc38e172a83ce2/AndroidManifest.xml:9:5-20
+	android:screenOrientation
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:14:9-47
+	android:supportsRtl
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:13:9-40
+activity#nl.chefkev.stormy.ui.MainActivity
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:15:19-50
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:19:27-74
+activity#nl.chefkev.stormy.ui.DailyForecastActivity
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:22:9-30:20
+	android:parentActivityName
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:25:13-58
+	android:label
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:24:13-57
+	android:theme
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:26:13-44
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:23:13-53
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:27:13-29:69
+	android:value
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:29:17-66
+	android:name
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml:28:17-63
+uses-sdk
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/adapters-3.3.1.aar/5a443381dfa90d6c53178b76499013f4/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/adapters-3.3.1.aar/5a443381dfa90d6c53178b76499013f4/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/library-3.3.1.aar/cf3fd4ca4153c2a625fd325ed5f93093/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.3.1] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/library-3.3.1.aar/cf3fd4ca4153c2a625fd325ed5f93093/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.0.aar/0b9be5abf228fb70ebffb7a8dae24478/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.0.aar/0b9be5abf228fb70ebffb7a8dae24478/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/dc5b75c19d9bdb7833cc38e172a83ce2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/dc5b75c19d9bdb7833cc38e172a83ce2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.0.aar/0d879d6607cbc7689dd92e2345a5e0db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.0.aar/0d879d6607cbc7689dd92e2345a5e0db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.0.aar/85704b6a803de9b76d0f782c95ff4a75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.0.aar/85704b6a803de9b76d0f782c95ff4a75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.0.aar/e6ce52403cf77b522c0f110edf040891/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.0.aar/e6ce52403cf77b522c0f110edf040891/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.0.aar/27c832b3d2ee21df841c6ecfd39ee331/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.0.aar/27c832b3d2ee21df841c6ecfd39ee331/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.0.aar/fd158bbce5b8c4219d8bc74fd99ee31d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.0.aar/fd158bbce5b8c4219d8bc74fd99ee31d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.0.aar/e8c3c5db1f0d6b56ce18cd044bbace13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.0.aar/e8c3c5db1f0d6b56ce18cd044bbace13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.0.aar/87fe027719b799f80785e3432d67e4c0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.0] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.0.aar/87fe027719b799f80785e3432d67e4c0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/dd1a651639c2c1b96ad20f0333942746/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/dd1a651639c2c1b96ad20f0333942746/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		ADDED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/kevinverbeek/Documents/GitHub/Stormy/app/src/main/AndroidManifest.xml

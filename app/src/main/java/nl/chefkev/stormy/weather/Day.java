@@ -20,9 +20,9 @@ public class Day implements Serializable {
     public Day() {
     }
 
-    //het ophalen van de juiste tijd voor de dagelijkse lijst
+    //het ophalen van de juiste tijd in dag-maand en uur-minuut-am/pm
     public String getTime() {
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM hh:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM hh:mm a");
         format.setTimeZone(TimeZone.getTimeZone(timezone));
 
         Date date = new Date(time * 1000);

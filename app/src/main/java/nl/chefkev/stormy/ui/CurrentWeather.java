@@ -60,14 +60,12 @@ public class CurrentWeather {
     }
 
     //Datum ophalen en zetten in dag-maand & uur-minuut
-    String getFormattedTime() {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM hh:mm");
-
-        formatter.setTimeZone(TimeZone.getTimeZone(timeZone));
+    public String getFormattedTime() {
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM HH:mm");
+        format.setTimeZone(TimeZone.getTimeZone(timeZone));
 
         Date dateTime = new Date(time * 1000);
-
-        return formatter.format(dateTime);
+        return format.format(dateTime);
     }
 
     String getIcon() {
@@ -86,15 +84,15 @@ public class CurrentWeather {
         this.time = time;
     }
 
-    double getTemperature() {
+   public double getTemperature() {
         return temperature;
     }
 
-    void setTemperature(double temperature) {
+    public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 
-    double getHumidity() {
+   public double getHumidity() {
         return humidity;
     }
 
@@ -102,7 +100,7 @@ public class CurrentWeather {
         this.humidity = humidity;
     }
 
-    double getPrecipChance() {
+    public double getPrecipChance() {
         return precipChance;
     }
 
