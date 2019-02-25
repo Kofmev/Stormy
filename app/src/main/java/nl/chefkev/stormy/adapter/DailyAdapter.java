@@ -17,6 +17,8 @@ import nl.chefkev.stormy.databinding.DailyListItemBinding;
  * Software development praktijk 1
  */
 
+//Hier wordt de data klaargezet om in het overzicht Per dag te tonen.
+
 public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> {
 
     private List<Day> days;
@@ -40,9 +42,9 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> 
     public void onBindViewHolder(DailyAdapter.ViewHolder holder, int position) {
         Day day = days.get(position);
         holder.listItemBinding.setDay(day);
-
     }
 
+    //het aantal items dat getoond moet worden
     @Override
     public int getItemCount() {
         return days.size();
@@ -51,7 +53,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> 
     class ViewHolder extends RecyclerView.ViewHolder {
         DailyListItemBinding listItemBinding;
 
-      ViewHolder(DailyListItemBinding dailyLayoutItemBinding) {
+        ViewHolder(DailyListItemBinding dailyLayoutItemBinding) {
             super(dailyLayoutItemBinding.getRoot());
             listItemBinding = dailyLayoutItemBinding;
         }

@@ -13,6 +13,7 @@ import nl.chefkev.stormy.R;
  * Software development praktijk 1
  */
 
+//Hier wordt een alert dialog gemaakt, die getoond kan worden in de MainActivity
 public class AlertDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
