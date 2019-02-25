@@ -197,10 +197,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1440" />
-    <option name="y" value="-352" />
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="x" value="1890" />
+    <option name="y" value="-245" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -285,7 +285,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="gitig&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;giti&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;gitignore&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;values.xm&#9;FILE&#9;file:///Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f13b2bbe1c87e53be60043d18955dc67/res/values/values.xml" />
+    <property name="SearchEverywhereHistoryKey" value="gitignor&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/app/.gitignore&#10;gitig&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;giti&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;gitignore&#9;FILE&#9;file:///Users/kevinverbeek/Documents/GitHub/Stormy/.gitignore&#10;values.xm&#9;FILE&#9;file:///Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f13b2bbe1c87e53be60043d18955dc67/res/values/values.xml" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="Pixel_2_XL_API_28" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
