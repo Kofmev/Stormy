@@ -21,6 +21,7 @@ import nl.chefkev.stormy.weather.Day;
 
 public class DailyForecastActivity extends AppCompatActivity {
 
+    // Hier wordt de juiste layout gepakt om de content te tonen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

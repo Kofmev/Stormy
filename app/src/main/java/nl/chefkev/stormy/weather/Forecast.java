@@ -28,6 +28,7 @@ public class Forecast {
         this.dailyForecast = dailyForecast;
     }
 
+    //Hier worden de icons in een switch gezet en aan de hand van de door de API verstrekte data wordt de goede getoond.
     public static int getIconID(String icon) {
         int iconID = R.drawable.clear_day;
 
