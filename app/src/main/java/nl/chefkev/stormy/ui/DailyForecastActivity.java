@@ -14,6 +14,11 @@ import nl.chefkev.stormy.adapter.DailyAdapter;
 import nl.chefkev.stormy.databinding.ContentDailyForecastBinding;
 import nl.chefkev.stormy.weather.Day;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class DailyForecastActivity extends AppCompatActivity {
 
     @Override

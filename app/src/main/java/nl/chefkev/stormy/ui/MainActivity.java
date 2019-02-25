@@ -35,6 +35,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
@@ -50,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getForecast(latitude, longitude);
         Log.d(TAG, "main UI code is running.");
-
     }
 
+    //Voorspelling ophalen aan hand van de data van Dark Sky api
     private void getForecast(double latitude, double longitude) {
         final ActivityMainBinding binding = DataBindingUtil.setContentView(MainActivity.this,
                 R.layout.activity_main);
@@ -77,11 +82,12 @@ public class MainActivity extends AppCompatActivity {
             Call call = client.newCall(request);
 
             call.enqueue(new Callback() {
+
                 @Override
                 public void onFailure(Call call, IOException e) {
-
                 }
 
+                //ophalen van de data adhv JSON
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
                     try {
@@ -111,10 +117,8 @@ public class MainActivity extends AppCompatActivity {
                                 public void run() {
 
                                     Drawable drawable = ResourcesCompat.getDrawable(getResources(), currentWeather.getIconById(), null);
-
                                 }
                             });
-
                         } else {
                             alertUserAboutError();
                         }
@@ -124,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
                         Log.e(TAG, "JSON exception caught:", e);
                     }
                 }
-
             });
         }
     }
 
+    //JSON data ophalen en setten
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {
         JSONObject forecast = new JSONObject(jsonData);
 
@@ -147,12 +151,13 @@ public class MainActivity extends AppCompatActivity {
         currentWeather.setSummary(currently.getString("summary"));
         currentWeather.setTemperature(currently.getDouble("temperature"));
         currentWeather.setTimeZone(timeZone);
-
+        // loggen van data
         Log.d(TAG, currentWeather.getFormattedTime());
 
         return currentWeather;
     }
 
+    //checken of het netwerk beschikbaar is, anders toast tonen
     private boolean isNetworkAvailable() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert manager != null;
@@ -169,20 +174,24 @@ public class MainActivity extends AppCompatActivity {
         return isAvailable;
     }
 
+    //tonen van de alert dialog als er een error is
     private void alertUserAboutError() {
         AlertDialogFragment dialog = new AlertDialogFragment();
         dialog.show(getFragmentManager(), "error_dialog");
     }
 
+    // Instellen van de ververs knop, wordt een toast getoond zodat gebruiker weet dat er iets gebeurd.
     public void refreshOnClick(View view) {
         Toast.makeText(this, "Refreshing data", Toast.LENGTH_LONG).show();
         getForecast(latitude, longitude);
     }
 
+    //maken van het JSON object
     private JSONObject createJSONObject(String JSONData) throws JSONException {
         return new JSONObject(JSONData);
     }
 
+    // Gereed maken van wat er gebeurd als je op de dag knop drukt
     public void dailyOnClick(View view) {
         List<Day> days = Arrays.asList(forecast.getDailyForecast());
         Intent intent = new Intent(this, DailyForecastActivity.class);
@@ -190,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //ophalen van de gegevens uit een JSON array
     private Day[] getDailyForecast(String JSONData) throws JSONException {
         JSONObject forecast = createJSONObject(JSONData);
         String timeZone = forecast.getString("timezone");
@@ -215,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
         return days;
     }
 
+    //Parsen van de data naar de forecast
     private Forecast parseForecastData(String jsonData) throws JSONException {
         Forecast forecast = new Forecast();
 

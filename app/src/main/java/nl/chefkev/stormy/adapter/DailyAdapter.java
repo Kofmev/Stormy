@@ -12,6 +12,11 @@ import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.weather.Day;
 import nl.chefkev.stormy.databinding.DailyListItemBinding;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> {
 
     private List<Day> days;

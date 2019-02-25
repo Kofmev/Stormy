@@ -7,6 +7,11 @@ import java.util.TimeZone;
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.weather.Forecast;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class CurrentWeather {
 
     private String locationLabel;

@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class Day implements Serializable {
     private long time;
     private String summary;
@@ -15,22 +20,16 @@ public class Day implements Serializable {
     public Day() {
     }
 
-    public Day(long time, String summary, double temperature, String icon, String timezone) {
-        this.time = time;
-        this.summary = summary;
-        this.temperature = temperature;
-        this.icon = icon;
-        this.timezone = timezone;
-    }
-
+    //het ophalen van de juiste tijd
     public String getTime() {
-        SimpleDateFormat format = new SimpleDateFormat("MMM dd");
+        SimpleDateFormat format = new SimpleDateFormat("hh mm");
         format.setTimeZone(TimeZone.getTimeZone(timezone));
 
         Date date = new Date(time * 1000);
         return format.format(date);
     }
 
+    //Hier worden getters en setters geplaatst om alle data op te halen en in te stellen
     public void setTime(long time) {
         this.time = time;
     }
@@ -49,10 +48,6 @@ public class Day implements Serializable {
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;
-    }
-
-    public String getTimezone() {
-        return timezone;
     }
 
     public void setTimezone(String timezone) {

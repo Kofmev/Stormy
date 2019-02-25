@@ -3,6 +3,11 @@ package nl.chefkev.stormy.weather;
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.ui.CurrentWeather;
 
+/**
+ * Created by Kevin Verbeek on 25-02-2019
+ * Software development praktijk 1
+ */
+
 public class Forecast {
     private CurrentWeather current;
     private Day[] dailyForecast;
