@@ -60,7 +60,7 @@ public class CurrentWeather {
     }
 
     //Datum ophalen en zetten in dag-maand & uur-minuut
-    public String getFormattedTime() {
+    String getFormattedTime() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM hh:mm");
 
         formatter.setTimeZone(TimeZone.getTimeZone(timeZone));
@@ -86,7 +86,7 @@ public class CurrentWeather {
         this.time = time;
     }
 
-    public double getTemperature() {
+    double getTemperature() {
         return temperature;
     }
 
@@ -94,7 +94,7 @@ public class CurrentWeather {
         this.temperature = temperature;
     }
 
-    public double getHumidity() {
+    double getHumidity() {
         return humidity;
     }
 
@@ -102,7 +102,7 @@ public class CurrentWeather {
         this.humidity = humidity;
     }
 
-    public double getPrecipChance() {
+    double getPrecipChance() {
         return precipChance;
     }
 
