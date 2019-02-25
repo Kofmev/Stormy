@@ -20,9 +20,9 @@ public class Day implements Serializable {
     public Day() {
     }
 
-    //het ophalen van de juiste tijd
+    //het ophalen van de juiste tijd voor de dagelijkse lijst
     public String getTime() {
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM hh:mm");
         format.setTimeZone(TimeZone.getTimeZone(timezone));
 
         Date date = new Date(time * 1000);
@@ -53,8 +53,6 @@ public class Day implements Serializable {
     public void setTimezone(String timezone) {
         this.timezone = timezone;
     }
-
-    public String getTimeZone(){return timezone;}
 
     public int getIcon() {
         return Forecast.getIconID(icon);

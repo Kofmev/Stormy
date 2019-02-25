@@ -26,6 +26,7 @@ public class CurrentWeather {
     CurrentWeather() {
     }
 
+    //Alle data die nodig is om te kunnen tonen in de MainActivity
     CurrentWeather(String locationLabel, String icon, long time, double temperature,
                    double humidity, double precipChance, String summary, String timeZone) {
         this.locationLabel = locationLabel;
@@ -58,8 +59,9 @@ public class CurrentWeather {
         return time;
     }
 
+    //Datum ophalen en zetten in dag-maand & uur-minuut
     public String getFormattedTime() {
-        SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM hh:mm");
 
         formatter.setTimeZone(TimeZone.getTimeZone(timeZone));
 
