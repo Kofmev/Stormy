@@ -5,10 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.adapter.DailyAdapter;
 import nl.chefkev.stormy.databinding.ContentDailyForecastBinding;

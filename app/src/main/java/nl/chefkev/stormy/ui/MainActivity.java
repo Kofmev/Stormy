@@ -15,16 +15,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
-
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.databinding.ActivityMainBinding;
 import nl.chefkev.stormy.weather.Day;
