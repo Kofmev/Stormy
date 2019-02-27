@@ -1,5 +1,7 @@
 package nl.chefkev.stormy.weather;
 
+import android.graphics.drawable.Drawable;
+
 import nl.chefkev.stormy.R;
 import nl.chefkev.stormy.ui.CurrentWeather;
 

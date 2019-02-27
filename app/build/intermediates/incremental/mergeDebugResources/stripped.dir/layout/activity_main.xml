@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout">
 
-    <data>
+                                                       
+                                                  
+                             
 
-        <variable
-            name="weather"
-            type="nl.chefkev.stormy.ui.CurrentWeather" />
-    </data>
+    
+
+                 
+                          
+                                                         
+           
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/appBackground"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.MainActivity" android:tag="layout/activity_main_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/layout">
 
         <TextView
             android:id="@+id/temperatureValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@{String.valueOf(Math.round(weather.temperature)), default=`19`}"
+            android:text="19"                                                              
             android:textColor="@android:color/white"
             android:textSize="125sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.407" />
+            app:layout_constraintVertical_bias="0.407"  android:tag="binding_1"/>
 
         <ImageView
             android:id="@+id/degreeImageView"
@@ -47,13 +47,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@{`Op ` + String.valueOf(weather.formattedTime + ` is het`), default= `Om 5:00 is het:` }"
+            android:text="Om 5:00 is het:"                                                                          
             android:textColor="@color/half_white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/temperatureValue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationValue" />
+            app:layout_constraintTop_toBottomOf="@+id/locationValue"  android:tag="binding_2"/>
 
         <TextView
             android:id="@+id/locationValue"
@@ -113,12 +113,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{String.valueOf(weather.humidity), default=`0.88`}"
+            android:text="0.88"                                               
             android:textColor="@android:color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/humidityLabel"
             app:layout_constraintStart_toStartOf="@+id/humidityLabel"
-            app:layout_constraintTop_toBottomOf="@+id/humidityLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/humidityLabel"  android:tag="binding_3"/>
 
         <TextView
             android:id="@+id/precipLabel"
@@ -137,12 +137,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{String.valueOf(Math.round(weather.precipChance * 100)) + ` % `, default = `50 %`}"
+            android:text="50 %"                                                                               
             android:textColor="@android:color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/precipLabel"
             app:layout_constraintStart_toStartOf="@+id/precipLabel"
-            app:layout_constraintTop_toBottomOf="@+id/precipLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/precipLabel"  android:tag="binding_4"/>
 
         <TextView
             android:id="@+id/summaryValue"
@@ -151,12 +151,12 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@{weather.summary, default=` Typisch Hollands weertje`}"
+            android:text=" Typisch Hollands weertje"                              
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/precipValue" />
+            app:layout_constraintTop_toBottomOf="@+id/precipValue"  android:tag="binding_5"/>
 
         <TextView
             android:id="@+id/darkSkyAttribution"
@@ -203,4 +203,4 @@
             app:srcCompat="@drawable/refresh" />
 
     </android.support.constraint.ConstraintLayout>
-</layout>
+         
