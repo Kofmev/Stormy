@@ -61,7 +61,7 @@ public class CurrentWeather {
 
     //Datum ophalen en zetten in dag-maand & uur-minuut
     public String getFormattedTime() {
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM HH:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MMM HH:mm");
         format.setTimeZone(TimeZone.getTimeZone(timeZone));
 
         Date dateTime = new Date(time * 1000);

@@ -29,6 +29,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder> 
         this.context = context;
     }
 
+    //Gebruik maken van een recyclerView
     @Override
     public DailyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 

@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kevinverbeek/Documents/GitHub/Stormy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
+            "outputFile": "/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.0.aar/87fe027719b799f80785e3432d67e4c0/res/values-am/values-am.xml",
+                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/82a1089be4fb3f8bcb9424db96481dfd/res/values-am/values-am.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,207,306,412,498,601,714,792,870,949,1049,1149,1245,1348,1447,1554,1707,1803",
+                        "endColumns": "101,98,105,85,102,112,77,77,78,99,99,95,102,98,106,152,95,78",
+                        "endOffsets": "202,301,407,493,596,709,787,865,944,1044,1144,1240,1343,1442,1549,1702,1798,1877"
+                    }
+                },
+                {
+                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/85686f5a51a0b0654cd4c10b72e1e8e8/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1882",
                         "endColumns": "100",
                         "endOffsets": "1978"
-                    }
-                },
-                {
-                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.0.aar/0b9be5abf228fb70ebffb7a8dae24478/res/values-am/values-am.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,207,306,412,498,601,714,792,870,949,1049,1149,1245,1348,1447,1554,1707,1803",
-                        "endColumns": "101,98,105,85,102,112,77,77,78,99,99,95,102,98,106,152,95,78",
-                        "endOffsets": "202,301,407,493,596,709,787,865,944,1044,1144,1240,1343,1442,1549,1702,1798,1877"
                     }
                 }
             ]

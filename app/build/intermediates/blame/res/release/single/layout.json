@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/daily_list_item.xml",
+        "source": "/Users/kevinverbeek/Desktop/YourWeather/app/src/main/res/layout/daily_list_item.xml"
+    },
+    {
+        "merged": "/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/content_daily_forecast.xml",
+        "source": "/Users/kevinverbeek/Desktop/YourWeather/app/src/main/res/layout/content_daily_forecast.xml"
+    },
+    {
+        "merged": "/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/kevinverbeek/Desktop/YourWeather/app/src/main/res/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Feb 27 14:06:43 CET 2019
+0.baseType=DIRECTORY
+0.base=/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/dex/devFluxRelease/mergeDexDevFluxRelease/out
+0.path=classes.dex
+0.set=DEX
+count=1

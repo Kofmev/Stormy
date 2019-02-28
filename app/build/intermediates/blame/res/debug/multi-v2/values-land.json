@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kevinverbeek/Documents/GitHub/Stormy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/kevinverbeek/Desktop/YourWeather/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.0.aar/0b9be5abf228fb70ebffb7a8dae24478/res/values-land/values-land.xml",
+                    "source": "/Users/kevinverbeek/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/82a1089be4fb3f8bcb9424db96481dfd/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
